@@ -1,0 +1,2 @@
+-- SQL script for ex_08.sql
+SELECT strftime('%Y', invoicedate), COUNT(*) as invoicesNumber, SUM(total) FROM Invoice WHERE strftime('%Y', invoicedate) IN ('2009', '2011') GROUP BY strftime('%Y', invoicedate);

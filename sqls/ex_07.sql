@@ -1,0 +1,2 @@
+-- SQL script for ex_07.sql
+SELECT I.Total, CONCAT(C.FirstName, ' ', C.LastName) AS CustomerFullname, I.BillingCountry, CONCAT(E.FirstName, ' ', E.LastName) AS EmployeeName FROM Invoice AS I JOIN Customer AS C ON I.CustomerId = C.CustomerId JOIN Employee AS E ON E.EmployeeId = C.SupportRepId;
